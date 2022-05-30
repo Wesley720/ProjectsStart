@@ -1,0 +1,37 @@
+public class CC {
+    private int numero;
+    private string cliente;
+    private float saldo;
+
+    public int getNumero(){
+        return numero;
+    }
+    public void setNumero(int numero){
+        this.numero = numero;
+    }
+    public string getCliente(){
+        return cliente;
+    }public void setCliente(string cliente){
+        this.cliente = cliente;
+    }
+    public float getSaldo(){
+       return saldo;
+    }
+    public void setSaldo(Float saldo){
+        this.saldo = saldo;
+    }
+    public void deposito(float valor)
+    {
+    saldo = saldo + valor;
+    }
+    public float consultarSaldo()
+    {
+    return getSaldo();
+    }
+    public void realizarSaque(Float valor);
+    {
+        if (saldo < valor)
+            System.out.println("Valor solicitado indisponível!");
+        else
+            saldo = saldo - valor;
+    }
