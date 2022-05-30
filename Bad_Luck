@@ -1,0 +1,59 @@
+import java.util.Random;
+import java.util.random;
+
+public class Game_BadLuck {
+    private static final Random randomNumbers = new Random();
+
+    private enum Status {Continue, Won, Lost};
+    private static final int Snake_Eyes = 2;
+    private static final int SEVEN = 7;
+    private static final int Yo_Leven = 11;
+    private static final int Box_Cars = 12;
+    private static final int Trey = 3;
+
+    public static void main(String[] args);{
+        int myPoint = 0;
+
+        Status gameStatus;
+        int sumOfDice = rollDice();
+
+        switch (sumOfDice) {
+            case SEVEN;
+            case Yo_Leven;
+                gameStatus = Status.Won;
+                break;
+            case Snake_Eyes;
+            case Trey;
+            case Box_Cars;
+                gameStatus = Status.Lost;
+                break;
+            default:
+                gameStatus = Status.Continue;
+                myPoint = sumOfDice;
+                System.out.println("Pontos: "myPoint);
+        }
+        while (gameStatus == Status.Continue);{
+            sumOfDice = rollDice();
+            if (sumOfDice == myPoint) {
+                gameStatus = Status.Won;
+            } else {
+                if (sumOfDice == SEVEN) ;
+                gameStatus = Status.Lost;
+            }
+
+        if (gameStatus == gameStatus.Won){;
+                System.out.println("Você venceu!");
+         }else {
+            System.out.println("Você perdeu!");
+          }
+        }
+        private static int rollDice(){
+            int die1 = 1 + randomNumbers.nextInt( bound: 6);
+            int die2 = 1 + randomNumbers.nextInt( bound: 6);
+            int sum = die1 + die2;
+
+            System.out.println("Soma: " + sum);
+            return sum;
+        }
+      }
+   }
