@@ -1,0 +1,22 @@
+public class Principal_CC {
+    public static void main(String[] args){
+        ContaCorrente cc=new ContaCorrente();
+
+        cc.setSaldo(6500);
+        System.out.println("Saldo: R$ " + cc.getSaldo());
+        cc.deposito(1500);
+        System.out.println("Saldo: R$ " + cc.getSaldo());
+        cc.realizarSaque(3000);
+        System.out.println("Saldo: R$ " + cc.getSaldo());
+        ContaCorrenteEspecial cce=new ContaCorrenteEspecial();
+        cce.setSaldo(1000);
+        cce.setLimite(2000);
+        System.out.println("Saldo: R$ " + cce.getSaldo());
+        cce.deposito(3500);
+        System.out.println("Saldo: R$ " + cce.getSaldo());
+        cce.realizarSaque(10000);
+        cce.deposito(3500);
+        cce.realizarSaque(2500);
+        System.out.println("Saldo: R$ " + cce.getSaldo());
+    }
+}
