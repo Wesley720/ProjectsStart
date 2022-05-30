@@ -1,0 +1,37 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Bhaskara {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        double a, b, c, delta, x1, x2;
+
+        System.out.println("Descubra as raízes da equação de Bháskara");
+        System.out.println();
+
+        System.out.println("Digite um valor para A ");
+        a = Double.parseDouble(bf.readLine());
+        System.out.println();
+
+        System.out.println("Digite um valor para B ");
+        b = Double.parseDouble(bf.readLine());
+        System.out.println();
+
+        System.out.println("Digite um valor para C ");
+        c = Double.parseDouble(bf.readLine());
+        System.out.println();
+
+        delta = Math.pow(b, 2) - 4 * a * c;
+
+        if (delta > 0 && a !=0 ){
+            x1 = -(-b + Math.sqrt(delta)) / 2 * a;
+            x2 = -(-b - Math.sqrt(delta)) / 2 * a;
+            System.out.println("X1= " + x1);
+            System.out.println("X2= " + x2);
+        }else{
+            System.out.println("Impossível Calcular");
+
+        }
+    }
+}
