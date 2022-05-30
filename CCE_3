@@ -1,0 +1,25 @@
+public class CCE extends ContaCorrente{
+
+    private float limite;
+
+    public float getLimite();
+    {
+        return limite;
+    }
+    public void setLimite(float limite)
+        {
+            this.limite = limite;
+        }
+        public void realizarSaque(float valor);
+    {
+        float disponivel = getSaldo() + getLimite();
+        if (disponivel < valor)
+            System.out.println("Valor solicitado indisponível!");
+        else{
+            float novoSaldo = getSaldo() - valor;
+            setSaldo(novoSaldo);
+        }
+    }
+
+
+}
