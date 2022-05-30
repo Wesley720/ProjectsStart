@@ -1,0 +1,30 @@
+public class Kjay_2 {
+    int volume = 0;
+
+    public int getVolume(){
+        return volume;
+    }
+    public void setVolume(int volume){
+        this.volume = volume;
+    }
+    public void aumentaVolume()
+    {
+        volume++;
+    }
+    public void diminuiVolume()
+    {
+        volume--;
+    }
+    public int retornaVolume()
+    {
+        if (volume < 0){
+            System.out.println("Volume já se encontra valor zerado!");
+            return volume = 0;
+        }
+        if (volume > 40){
+            System.out.println("Volume já se encontra no máximo!");
+            return volume = 40;
+        }
+        return this.volume;
+    }
+}
