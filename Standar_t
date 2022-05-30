@@ -1,0 +1,34 @@
+ BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        int op = 1;
+        do {
+            System.out.println("Boa Noite");
+            System.out.println("Para efetuar o cálculo de sua comanda digitem os nomes: ");
+            String nome_casal = bf.readLine();
+
+            System.out.println("Digite o valor gasto com sua alimentação: ");
+            double alimentacao = Double.parseDouble(bf.readLine());
+
+            System.out.println("Digite o valor gasto com suas bebidas: ");
+            double bebidas = Double.parseDouble(bf.readLine());
+
+            System.out.println("Digite o valor do seu Kit: ");
+            double lembranca = Double.parseDouble(bf.readLine());
+            double taxa = (alimentacao + bebidas) / 10;
+            double valor_total = (alimentacao + bebidas + taxa + lembranca);
+
+            System.out.printf("O valor da sua comanda é de R$ %.2f", valor_total);
+            System.out.println("Insira agora o valor a ser pago, para o calculo de seu troco: ");
+            double valor_pago = Double.parseDouble(bf.readLine());
+            double troco = (valor_pago - valor_total);
+
+            System.out.println("Obrigado pela preferência " + nome_casal);
+            System.out.printf("O valor total é de: R$ %.3f", valor_total);
+            System.out.printf("Seu valor pago foi de: R$ %.3f", valor_pago);
+            System.out.printf("Seu troco foi de: R$ %.3f", troco);
+            System.out.println("Tenha um ótima noite, voltem sempre!");
+            System.out.println("1 - Continuar, 2 - Parar");
+            op = Integer.parseInt(bf.readLine());
+
+        } while (op != 2);
+    }
+}
