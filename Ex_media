@@ -1,0 +1,29 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Ex1_Media {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        double nota1, nota2, media;
+        String nome_aluno, resultado;
+        System.out.println("Digite o nome do aluno: ");
+        nome_aluno = bf.readLine();
+        System.out.println("Digite a primeira nota: ");
+        nota1 = Double.parseDouble(bf.readLine());
+        System.out.println("Digite a segunda nota: ");
+        nota2 = Double.parseDouble(bf.readLine());
+        media = (nota1 + nota2) / 2;
+        if (media >=7) {
+            resultado = "Aprovado";
+        }
+        else{
+            if (media >= 1.8) {
+                resultado = "Exame";
+            } else{
+                resultado = "Reprovado";
+            }
+        }
+        System.out.println(nome_aluno + "A sua situação é: " + resultado);
+    }
+}
