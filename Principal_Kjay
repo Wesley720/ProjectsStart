@@ -1,0 +1,12 @@
+public class Principal_Kjay {
+    public static void main(String[] args){
+        Televisor tv = new Televisor();
+        tv.aumentaVolume();
+        tv.aumentaVolume();
+        tv.aumentaVolume();
+        tv.aumentaVolume();
+        tv.diminuiVolume();
+        tv.diminuiVolume();
+        System.out.println("O volume atual é de: " + tv.retornoVolume());
+    }
+}
